@@ -1,0 +1,161 @@
+/*1. CSS Variables*/
+:root {
+  --bg-light: #E0F7FA;               
+  --bg-white: #fdfdfd;               
+  --text-dark: #00363A;              
+  --primary: #0288D1;                
+  --secondary: #B2EBF2;              
+  --font-main: 'Roboto', sans-serif; 
+}
+/* Global Reset & Base */ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; 
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  padding-top: 10px;
+}
+
+ul, ol {
+  line-height: 1.5; 
+  margin-bottom: 1rem; 
+}
+
+li {
+  margin-bottom: 0.5rem; 
+}
+
+/*Top Container*/
+.top-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh; 
+  background-image: url('images/top-background.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Divider*/
+hr.divider{border: dotted #191d1d 6px; border-bottom:none ;width: 4%; margin: 3rem auto; }
+
+
+/* Middle Container*/
+.middle-container {
+  background: var(-secondary);
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.middle-container img.rounded-circle {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* Skills*/ 
+#skills .row {
+  justify-content: center; 
+  gap: 2rem; 
+}
+#skills .row > [class*="col-"] {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+#skills .col-md-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+}
+#skills img {
+  width: 100px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+#skills h3 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/*Contact Section*/
+#contact {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+#contact .btn-primary {
+  background-color: var(--primary);
+  border: none;
+}
+#contact .btn-primary:hover {
+  background-color: #335678; 
+}
+
+/*Footer / Bottom Container*/
+.bottom-container {
+  background: var(--secondary);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.bottom-container .footer-link {
+  margin: 0 1rem;
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 500;
+}
+.bottom-container .footer-link:hover {
+  text-decoration: underline;
+}
+.bottom-container p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Responsive Adjustments*/
+@media (max-width: 768px) {
+  .top-container h1 {
+    font-size: 2.5rem;
+  }
+  .top-container h2 {
+    font-size: 1.25rem;
+  }
+  .middle-container img.rounded-circle {
+    width: 120px;
+    height: 120px;
+  }
+  #skills .row {
+    flex-direction: column;
+  }
+}
+
+/* Get in touch*/
+:root{
+  --secondary: #6299a0; 
+  --primary: #0288D1;
+}
+.contact-card{
+  background-color:rgba(255,255,255, 0.1);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.contact-card:hover{
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
